@@ -83,7 +83,7 @@
 
 1. **Flat fees always** — no hourly surprises, no meter running
 2. **Straightforward estates only** — no upselling into complexity you don't need
-3. **Fast** — done in weeks, not months
+3. **Fast** — done in 48 hours
 4. **Credentialed but accessible** — Cornell/FERC/Supreme Court background means overqualified for cookie-cutter work; she does it anyway because it matters
 5. **Founder who gets it** — 30 years as a solo attorney = she knows exactly what busy professionals need and don't need
 
