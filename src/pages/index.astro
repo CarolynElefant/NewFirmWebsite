@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Affordable Estate Planning for Busy Families in Maryland">
+
+  <!-- Hero -->
+  <section class="bg-brand-cream">
+    <div class="max-w-5xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="inline-block bg-brand-teal/10 text-brand-teal text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+          Flat-fee estate planning · Bethesda, MD
+        </div>
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-brand-slate leading-tight mb-6">
+          You've been meaning to do this for years.
+        </h1>
+        <p class="text-xl text-brand-slate-light leading-relaxed mb-8">
+          Estate planning doesn't have to mean thinking about death, spending $5,000, or wasting a Saturday with a lawyer who bills by the hour. Plan Simple makes it fast, affordable, and actually painless.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact" class="bg-brand-coral text-white px-8 py-4 rounded-full font-semibold text-center hover:bg-brand-coral-dark transition-colors">
+            Get Started — It's Simple
+          </a>
+          <a href="/services" class="border-2 border-brand-teal text-brand-teal px-8 py-4 rounded-full font-semibold text-center hover:bg-brand-teal hover:text-white transition-colors">
+            See Packages & Prices
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center">
+        <div class="bg-white rounded-3xl shadow-xl p-8 max-w-xs w-full">
+          <div class="text-4xl mb-4">✅</div>
+          <h3 class="font-serif text-xl font-bold text-brand-slate mb-4">The Family Plan</h3>
+          <ul class="text-sm text-brand-slate-light space-y-2 mb-6">
+            <li class="flex items-start gap-2"><span class="text-brand-teal mt-0.5">✓</span> Wills for both of you</li>
+            <li class="flex items-start gap-2"><span class="text-brand-teal mt-0.5">✓</span> Guardianship for your kids</li>
+            <li class="flex items-start gap-2"><span class="text-brand-teal mt-0.5">✓</span> Financial Powers of Attorney</li>
+            <li class="flex items-start gap-2"><span class="text-brand-teal mt-0.5">✓</span> Healthcare POA + Advance Directives</li>
+            <li class="flex items-start gap-2"><span class="text-brand-teal mt-0.5">✓</span> Done in 2–3 weeks</li>
+          </ul>
+          <div class="text-3xl font-bold text-brand-coral">$1,800</div>
+          <div class="text-xs text-gray-400 mt-1">flat fee · no surprises</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem section -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-slate mb-6">
+        You're not avoiding this because you don't care.
+      </h2>
+      <p class="text-lg text-brand-slate-light leading-relaxed">
+        You're avoiding it because it feels like a big deal. Complicated forms. Morbid conversations. A lawyer who charges $400/hour and takes three months. It keeps getting pushed to "someday."
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {[
+        { icon: "💸", title: "Not $5,000", body: "Traditional estate planning can run $3,000–$8,000 at a big firm. Our flat-fee packages start at $800. You know the price before you sign anything." },
+        { icon: "⚡", title: "Not months", body: "We don't bill by the hour, so there's no incentive to drag it out. Most plans are complete in 2–3 weeks." },
+        { icon: "🧠", title: "Not complicated", body: "You have a home, a family, and retirement accounts — not a dynasty. Your estate plan should be simple. We keep it that way." }
+      ].map(card => (
+        <div class="bg-brand-cream rounded-2xl p-8">
+          <div class="text-4xl mb-4">{card.icon}</div>
+          <h3 class="font-serif text-xl font-bold text-brand-slate mb-3">{card.title}</h3>
+          <p class="text-brand-slate-light leading-relaxed">{card.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="bg-brand-slate text-white py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Simple packages. Flat fees. No surprises.</h2>
+        <p class="text-gray-300 text-lg">Pick what fits your situation. All prices are fixed — no hourly billing, ever.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {
+            name: "The Essentials",
+            price: "$800",
+            sub: "individual",
+            alt: "$1,200 for couples",
+            items: ["Will", "Financial Power of Attorney", "Healthcare POA", "Advance Directive"],
+            href: "/services/wills",
+            highlight: false
+          },
+          {
+            name: "The Family Plan",
+            price: "$1,800",
+            sub: "for couples with kids",
+            alt: "Most popular",
+            items: ["Everything in Essentials (x2)", "Guardianship designations", "Personal property memo", "Done in 2–3 weeks"],
+            href: "/services/family-plan",
+            highlight: true
+          },
+          {
+            name: "The Trust Package",
+            price: "$2,800",
+            sub: "for homeowners",
+            alt: "Skip probate entirely",
+            items: ["Revocable living trust", "Pour-over wills (x2)", "POA + Directives (x2)", "Trust funding checklist"],
+            href: "/services/trusts",
+            highlight: false
+          },
+          {
+            name: "Document Update",
+            price: "$300–500",
+            sub: "per document",
+            alt: "Already have docs?",
+            items: ["Review existing documents", "Redraft as needed", "Maryland-compliant", "Quick turnaround"],
+            href: "/contact",
+            highlight: false
+          }
+        ].map(pkg => (
+          <div class={`rounded-2xl p-7 flex flex-col ${pkg.highlight ? 'bg-brand-coral' : 'bg-white/10'}`}>
+            <div class="text-xs font-semibold uppercase tracking-wider text-white/60 mb-2">{pkg.alt}</div>
+            <h3 class="font-serif text-xl font-bold text-white mb-1">{pkg.name}</h3>
+            <div class="text-3xl font-bold text-white mb-1">{pkg.price}</div>
+            <div class="text-sm text-white/70 mb-6">{pkg.sub}</div>
+            <ul class="space-y-2 mb-8 flex-1">
+              {pkg.items.map(item => (
+                <li class="text-sm text-white/80 flex items-start gap-2">
+                  <span class="mt-0.5">✓</span> {item}
+                </li>
+              ))}
+            </ul>
+            <a href={pkg.href} class={`text-center py-3 px-6 rounded-full text-sm font-semibold transition-colors ${pkg.highlight ? 'bg-white text-brand-coral hover:bg-gray-100' : 'border border-white/40 text-white hover:bg-white/10'}`}>
+              Learn more
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About / credibility -->
+  <section class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-slate mb-6">
+          Overqualified for cookie-cutter work. That's the point.
+        </h2>
+        <p class="text-brand-slate-light leading-relaxed mb-4">
+          I'm Carolyn Elefant — Cornell Law, former FERC attorney, and the founder of one of the most-read law firm practice blogs in the country. I've spent 30 years figuring out how to practice law efficiently without a big firm behind me.
+        </p>
+        <p class="text-brand-slate-light leading-relaxed mb-8">
+          I could charge $10,000 for an estate plan. I don't, because for most Maryland families, it's not necessary. You need straightforward documents done right — and that's exactly what I do.
+        </p>
+        <a href="/about" class="text-brand-teal font-semibold hover:underline">Meet Carolyn →</a>
+      </div>
+      <div class="bg-brand-cream rounded-3xl p-8">
+        <h3 class="font-semibold text-brand-slate mb-6 text-sm uppercase tracking-wider">What people say</h3>
+        <div class="space-y-6">
+          {[
+            { quote: "We'd been putting this off for four years after our second kid. Carolyn made it completely painless. Done in two weeks.", name: "Sarah M., Bethesda" },
+            { quote: "I expected it to be complicated and expensive. It was neither. I wish I'd done this sooner.", name: "James T., Silver Spring" },
+          ].map(t => (
+            <div class="border-l-4 border-brand-teal pl-4">
+              <p class="text-brand-slate-light text-sm italic leading-relaxed mb-2">"{t.quote}"</p>
+              <p class="text-xs font-semibold text-brand-slate">{t.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ teaser -->
+  <section class="bg-brand-cream py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-serif font-bold text-brand-slate text-center mb-12">Common questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do I really need a trust, or is a will enough?", a: "For most Maryland families, a will is enough. A trust makes sense if you own a home and want to avoid the time and cost of probate, or if you have minor children or a blended family. We'll help you figure out which fits your situation — at no extra charge." },
+          { q: "What's the difference between a will and a living will?", a: "A will says what happens to your stuff after you die. A living will (also called an advance directive) says what medical care you want if you're incapacitated but still alive. You need both. They're included in every package." },
+          { q: "How long does this actually take?", a: "Most plans are complete in 2–3 weeks from our first call. We move fast because we're not billing by the hour." },
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-6">
+            <h3 class="font-semibold text-brand-slate mb-2">{item.q}</h3>
+            <p class="text-brand-slate-light text-sm leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-10">
+        <a href="/faq" class="text-brand-teal font-semibold hover:underline">See all questions →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-slate mb-6">
+      Stop putting it off. It's easier than you think.
+    </h2>
+    <p class="text-xl text-brand-slate-light mb-10 max-w-xl mx-auto">
+      Schedule a free 20-minute call. We'll figure out which package fits, answer every question you have, and get started.
+    </p>
+    <a href="/contact" class="bg-brand-coral text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-brand-coral-dark transition-colors inline-block">
+      Schedule a Free Call
+    </a>
+    <p class="text-sm text-gray-400 mt-4">No obligation. No hourly meter. Just a conversation.</p>
+  </section>
+
+</Layout>
